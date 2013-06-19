@@ -6,12 +6,12 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/trabajoit?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <mapping resource="negocio/Alquiler.hbm.xml"/>
-    <mapping resource="negocio/Valoracion.hbm.xml"/>
     <mapping resource="negocio/Horariopista.hbm.xml"/>
-    <mapping resource="negocio/Instalacion.hbm.xml"/>
-    <mapping resource="negocio/Horario.hbm.xml"/>
     <mapping resource="negocio/Usuario.hbm.xml"/>
     <mapping resource="negocio/Pista.hbm.xml"/>
+    <mapping resource="negocio/Horario.hbm.xml"/>
+    <mapping resource="negocio/Valoracion.hbm.xml"/>
+    <mapping resource="negocio/Instalacion.hbm.xml"/>
+    <mapping resource="negocio/Alquiler.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

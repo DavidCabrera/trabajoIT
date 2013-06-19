@@ -1,7 +1,7 @@
 <%@page import="negocio.Usuario" %>
 <%@page import="org.hibernate.Query" %>
 <%@page import="org.hibernate.Session" %>
-<%@page import="negocio.HibernateUtil" %>
+<%@page import="negocio.NewHibernateUtil" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +13,7 @@
         <h1>Hello World!</h1>
         
         <%
-            Session s= HibernateUtil.getSessionFactory().openSession();
+            Session s= NewHibernateUtil.getSessionFactory().openSession();
             s.beginTransaction();
             Query q=s.createQuery("from Usuario where idUsuario=1");
             

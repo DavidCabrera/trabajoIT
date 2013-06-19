@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 19-jun-2013 18:45:26 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 19-jun-2013 19:02:43 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="negocio.Usuario" table="usuario" catalog="trabajoit">
         <id name="idUsuario" type="java.lang.Integer">
@@ -16,6 +16,9 @@
         </property>
         <property name="pass" type="string">
             <column name="pass" length="45" />
+        </property>
+        <property name="administrador" type="boolean">
+            <column name="administrador" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

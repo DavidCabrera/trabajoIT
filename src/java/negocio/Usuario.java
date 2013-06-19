@@ -1,5 +1,5 @@
 package negocio;
-// Generated 19-jun-2013 18:45:24 by Hibernate Tools 3.2.1.GA
+// Generated 19-jun-2013 19:02:41 by Hibernate Tools 3.2.1.GA
 
 
 
@@ -13,14 +13,20 @@ public class Usuario  implements java.io.Serializable {
      private String nombre;
      private String email;
      private String pass;
+     private boolean administrador;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String email, String pass) {
+	
+    public Usuario(boolean administrador) {
+        this.administrador = administrador;
+    }
+    public Usuario(String nombre, String email, String pass, boolean administrador) {
        this.nombre = nombre;
        this.email = email;
        this.pass = pass;
+       this.administrador = administrador;
     }
    
     public Integer getIdUsuario() {
@@ -50,6 +56,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setPass(String pass) {
         this.pass = pass;
+    }
+    public boolean isAdministrador() {
+        return this.administrador;
+    }
+    
+    public void setAdministrador(boolean administrador) {
+        this.administrador = administrador;
     }
 
 
