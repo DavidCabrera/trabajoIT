@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-jun-2013 18:45:26 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="negocio.Horariopista" table="horariopista" catalog="trabajoit">
+        <composite-id name="id" class="negocio.HorariopistaId">
+            <key-property name="idHorario" type="int">
+                <column name="idHorario" />
+            </key-property>
+            <key-property name="idPista" type="int">
+                <column name="idPista" />
+            </key-property>
+        </composite-id>
+        <property name="ocupada" type="java.lang.Boolean">
+            <column name="ocupada" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,3 +1,7 @@
+<%@page import="negocio.Usuario" %>
+<%@page import="org.hibernate.Query" %>
+<%@page import="org.hibernate.Session" %>
+<%@page import="negocio.HibernateUtil" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,6 +12,14 @@
     <body>
         <h1>Hello World!</h1>
         
-        Buenas 
+        <%
+            Session s= HibernateUtil.getSessionFactory().openSession();
+            s.beginTransaction();
+            Query q=s.createQuery("from Usuario where idUsuario=1");
+            
+            Usuario u=(Usuario) q.uniqueResult();
+        
+        %>
+        <%=u.getNombre() %>
     </body>
 </html>

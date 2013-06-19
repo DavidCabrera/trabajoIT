@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-jun-2013 18:45:26 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="negocio.Valoracion" table="valoracion" catalog="trabajoit">
+        <id name="idValoracion" type="java.lang.Integer">
+            <column name="idValoracion" />
+            <generator class="identity" />
+        </id>
+        <property name="idUsuario" type="java.lang.Integer">
+            <column name="idUsuario" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="140" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+        <property name="idPista" type="java.lang.Integer">
+            <column name="idPista" />
+        </property>
+    </class>
+</hibernate-mapping>

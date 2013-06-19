@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-jun-2013 18:45:26 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="negocio.Alquiler" table="alquiler" catalog="trabajoit">
+        <id name="idAlquiler" type="java.lang.Integer">
+            <column name="idAlquiler" />
+            <generator class="identity" />
+        </id>
+        <property name="idUsuario" type="string">
+            <column name="idUsuario" length="45" />
+        </property>
+        <property name="idHorario" type="java.lang.Integer">
+            <column name="idHorario" />
+        </property>
+        <property name="preciototal" type="string">
+            <column name="preciototal" length="45" />
+        </property>
+        <property name="idPista" type="java.lang.Integer">
+            <column name="idPista" />
+        </property>
+    </class>
+</hibernate-mapping>
